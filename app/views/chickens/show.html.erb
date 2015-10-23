@@ -1,0 +1,17 @@
+<% if @error %>
+  <p><%= @error %></p>
+<% else %>
+  <h1><%= @chicken.name %></h1> 
+  <div class="color" style="background-color:<%= @chicken.colour %>"></div>
+  <p>All Val's chickens live for 100 days only:</p> 
+  <%= number_to_percentage(@chicken.age, precision: 0) %>
+  
+<h2><%=@chicken.favourite.class %></h2>
+  <p>This is<% "NOT" unless @chicken.favourite %> my favourite chicken.</p>
+
+  <%= @chicken.birthday %>
+  <%= @chicken.weight %>
+  <%= @chicken.rating%>
+  <%= @chicken.imageurl %>
+  <%= @chicken.gender %>
+<% end %>
